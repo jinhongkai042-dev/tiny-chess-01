@@ -14,6 +14,7 @@ the make.fun bounty [tiny-chess-01](https://make.fun/bounty/tiny-chess-01).
   reverse futility pruning; moves ordered by TT move, MVV-LVA, killers and
   history.
 - Tapered evaluation: material and piece-square terms kept incrementally.
+  No pawn-structure terms (tested and removed because they weakened play).
 - Repetitions are scored as draws, using the game's move list from the env.
 - Deterministic: every search stops at a fixed node budget (200,000 nodes),
   never a clock, and uses no randomness.
