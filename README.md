@@ -16,6 +16,7 @@ the make.fun bounty [tiny-chess-01](https://make.fun/bounty/tiny-chess-01).
 - Tapered evaluation: material and piece-square terms kept incrementally.
   No pawn-structure terms (tested and removed because they weakened play).
 - Repetitions are scored as draws, using the game's move list from the env.
+- Quiescence in check searches all legal evasions and scores checkmate if none exist; repetition is scored as a draw only on the third occurrence.
 - Deterministic: every search stops at a fixed node budget (200,000 nodes),
   never a clock, and uses no randomness.
 
